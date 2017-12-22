@@ -3,7 +3,8 @@ const initialState = {
     propertyDescription: '',
     address: '',
     city: '',
-    zip: 0
+    zip: 0,
+    state1: ''
 }
 
 
@@ -33,7 +34,7 @@ function reducer(state = initialState, action){
         return Object.assign({},state, {city: action.payload})
 
         case UPDATE_STATE:
-        return Object.assign({},state, {state: action.payload})
+        return Object.assign({},state, {state1: action.payload})
 
         case UPDATE_ZIP:
         return Object.assign({},state, {zip: action.payload})
@@ -63,10 +64,10 @@ export function updateAddress( address ) {
     }
 }
 
-export function updateState( state ) {
+export function updateState( state1 ) {
     return {
         type: UPDATE_STATE,
-        payload: state
+        payload: state1
     }
 }
 

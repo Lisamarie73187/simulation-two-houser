@@ -9,6 +9,7 @@ import { updateZip } from '../ducks/reducer';
 
 
 class WizardTwo extends Component {
+
     render(){
         return (
             <div>
@@ -16,6 +17,7 @@ class WizardTwo extends Component {
                 <h2>City</h2><input/>
                 <h2>State</h2><input/>
                 <h2>Zip</h2><input/>
+                <Link to="/wizard/3"><button>Next Step</button></Link>
             </div>
         )
     }
